@@ -1,0 +1,3 @@
+# Directories for building into
+build/
+build_*/
