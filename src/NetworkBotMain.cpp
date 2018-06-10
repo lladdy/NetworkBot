@@ -7,7 +7,7 @@
 
 #include "LadderInterface.h"
 
-class NetworkLadderBot : public sc2::Agent {
+class NetworkBot : public sc2::Agent {
 public:
 	virtual void OnGameStart() final {
 		const sc2::ObservationInterface* observation = Observation();
@@ -41,5 +41,5 @@ private:
 
 int main(int argc, char* argv[])
 {
-	RunBot(argc, argv, new NetworkLadderBot(), sc2::Race::Terran);
+	RunBot(argc, argv, new NetworkBot(), sc2::Race::Terran);
 }
