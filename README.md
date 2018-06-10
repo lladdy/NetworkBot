@@ -1,4 +1,4 @@
-# NetworkLadderBot
+# NetworkBot
 A bot for the Sc2LadderServer system that connects over a network.
 
 # Developer Install / Compile Instructions
@@ -13,8 +13,8 @@ A bot for the Sc2LadderServer system that connects over a network.
 
 ```bat
 :: Clone the project
-$ git clone --recursive https://github.com/Cryptyc/Sc2LadderServer.git
-$ cd Sc2LadderServer
+$ git clone --recursive https://github.com/lladdy/NetworkBot
+$ cd NetworkBot
 
 :: Create build directory.
 $ mkdir build
@@ -24,15 +24,15 @@ $ cd build
 $ cmake ../ -G "Visual Studio 15 2017 Win64"
 
 :: Build the project using Visual Studio.
-$ start Sc2LadderServer.sln
+$ start NetworkBot.sln
 ```
 
  ### Linux and OS X
  
  ```bash
  # Clone the project.
- $ git clone --recursive https://github.com/Cryptyc/Sc2LadderServer.git
- $ cd Sc2LadderServer
+ $ git clone --recursive https://github.com/lladdy/NetworkBot
+ $ cd NetworkBot
  
  # Create build directory.
  $ mkdir build
