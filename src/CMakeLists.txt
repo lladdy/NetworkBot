@@ -1,5 +1,5 @@
 # Source files
-file(GLOB SOURCES_NETWORKLADDERBOT "*.cpp" "*.h")
+file(GLOB SOURCES_NETWORKBOT "*.cpp" "*.h")
 
 # Include directories
 include_directories(SYSTEM
@@ -13,11 +13,11 @@ include_directories(SYSTEM
 link_directories(${PROJECT_BINARY_DIR}/s2client-api/bin)
 
 # Create the executable.
-add_executable(NetworkLadderBot ${SOURCES_NETWORKLADDERBOT})
+add_executable(NetworkBot ${SOURCES_NETWORKBOT})
 
-target_link_libraries(NetworkLadderBot
+target_link_libraries(NetworkBot
     sc2api sc2lib sc2utils sc2protocol civetweb libprotobuf
 )
 
 # Set working directory as the project root
-set_target_properties(NetworkLadderBot PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}")
+set_target_properties(NetworkBot PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}")

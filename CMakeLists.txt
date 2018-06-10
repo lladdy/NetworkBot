@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.6)
 
-project(NetworkLadderBot)
+project(NetworkBot)
 
 # Specify output directories.
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
@@ -20,8 +20,8 @@ set(BUILD_API_TESTS OFF CACHE INTERNAL "" FORCE)
 add_subdirectory("src")
 add_subdirectory("s2client-api")
 
-# set NetworkLadderBot as startup project
-set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT NetworkLadderBot)
+# set NetworkBot as startup project
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT NetworkBot)
 
 # set folders/subfolders
 # there might be a better way to do this than
