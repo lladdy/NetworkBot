@@ -1,3 +1,5 @@
+#include "LadderCoordinator.h"
+
 static sc2::Difficulty GetDifficultyFromString(std::string InDifficulty)
 {
 	if (InDifficulty == "VeryEasy")
@@ -127,7 +129,7 @@ static void RunBot(int argc, char *argv[], sc2::Agent *Agent,sc2::Race race)
 	ConnectionOptions Options;
 	ParseArguments(argc, argv, Options);
 
-	sc2::Coordinator coordinator;
+	LadderCoordinator coordinator;
 	if (!coordinator.LoadSettings(argc, argv)) {
 		return;
 	}
@@ -154,7 +156,7 @@ static void RunBot(int argc, char *argv[], sc2::Agent *Agent,sc2::Race race)
 
 	// Step forward the game simulation.
 	std::cout << "Connecting to port " << Options.GamePort << std::endl;
-	coordinator.Connect(Options.GamePort);
+	coordinator.Connect(Options.ServerAddress, Options.GamePort);
 	coordinator.SetupPorts(num_agents, Options.StartPort, false);
 	// Step forward the game simulation.
 	coordinator.JoinGame();
