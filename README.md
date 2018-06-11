@@ -1,6 +1,19 @@
 # NetworkBot
 A bot for the Sc2LadderServer system that connects over a network.
 
+# Running the bot
+The bot accepts parameters via the following commandline arguments:
+
+| Command | Short Command | Description |
+|---|---|---|        
+| `--LadderServer`  |-l|	Ladder server address   |
+| `--GamePort`      |-g|	Port to connect to      |
+| `--StartPort`     |-i|	Starting server port    |
+Example:
+```
+NetworkBot.exe --LadderServer 192.168.1.138 --GamePort 5677 --StartPort 5690
+```
+
 # Developer Install / Compile Instructions
 ## Requirements
 * [CMake](https://cmake.org/download/)
