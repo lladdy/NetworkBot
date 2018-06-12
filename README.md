@@ -1,6 +1,9 @@
 # NetworkBot
 A bot for the Sc2LadderServer system that connects over a network.
 
+# !Currently not working!
+Note that the bot does not work at this time because I had something hard-coded in my test environment that allowed the bot to work - I intend to resolve this issue.
+
 # Running the bot
 The bot accepts parameters via the following commandline arguments:
 
