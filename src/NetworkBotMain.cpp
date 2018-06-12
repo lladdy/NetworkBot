@@ -39,6 +39,8 @@ public:
 private:
 };
 
+
+
 int main(int argc, char* argv[])
 {
 	RunBot(argc, argv, new NetworkBot(), sc2::Race::Terran);
