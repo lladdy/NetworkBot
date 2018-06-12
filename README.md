@@ -9,6 +9,7 @@ The bot accepts parameters via the following commandline arguments:
 | `--LadderServer`  |`-l`|	Ladder server address   |
 | `--GamePort`      |`-g`|	Port to connect to      |
 | `--StartPort`     |`-i`|	Starting server port    |
+
 Example:
 ```
 NetworkBot.exe --LadderServer 192.168.1.138 --GamePort 5677 --StartPort 5690
