@@ -43,5 +43,13 @@ private:
 
 int main(int argc, char* argv[])
 {
-	RunBot(argc, argv, new NetworkBot(), sc2::Race::Terran);
+	ConnectionOptions Options;
+	ParseArguments(argc, argv, Options);
+	if (Options.type == "game")
+	{
+		RunGame(argc, argv, Options);
+	}
+	else
+		RunBot(argc, argv, new NetworkBot(), sc2::Race::Terran);
+	return 0;
 }
