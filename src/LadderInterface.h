@@ -129,7 +129,7 @@ static void RunBot(int argc, char *argv[], sc2::Agent *Agent,sc2::Race race)
 	ConnectionOptions Options;
 	ParseArguments(argc, argv, Options);
 
-	LadderCoordinator coordinator;
+	LadderCoordinator coordinator(Options.ServerAddress);
 	if (!coordinator.LoadSettings(argc, argv)) {
 		return;
 	}

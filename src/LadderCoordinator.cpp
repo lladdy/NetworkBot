@@ -150,7 +150,7 @@ public:
 	sc2::InterfaceSettings interface_settings_;
 	sc2::ProcessSettings process_settings_;
 
-	LadderCoordinatorImp();
+	LadderCoordinatorImp(const std::string& address);
     ~LadderCoordinatorImp();
 
     bool StartGame();
@@ -185,13 +185,13 @@ public:
     bool use_generalized_ability_id = true;
 };
 
-LadderCoordinatorImp::LadderCoordinatorImp() :
+LadderCoordinatorImp::LadderCoordinatorImp(const std::string& address) :
     agents_(),
     replay_observers_(),
     game_ended_(),
     starcraft_started_(false),
     game_settings_(),
-    process_settings_(false, 1, "", "127.0.0.1", sc2::kDefaultProtoInterfaceTimeout, 8168, false) {
+    process_settings_(false, 1, "", address, sc2::kDefaultProtoInterfaceTimeout, 8168, false) {
 }
 
 LadderCoordinatorImp::~LadderCoordinatorImp() {
@@ -650,8 +650,8 @@ bool LadderCoordinatorImp::Relaunch(sc2::ReplayObserver* replay_observer) {
 
 // Coordinator.
 
-LadderCoordinator::LadderCoordinator() {
-    imp_ = new LadderCoordinatorImp();
+LadderCoordinator::LadderCoordinator(const std::string& address) {
+    imp_ = new LadderCoordinatorImp(address);
 }
 
 LadderCoordinator::~LadderCoordinator() {

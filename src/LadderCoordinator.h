@@ -15,7 +15,7 @@ class LadderCoordinatorImp;
 //! Coordinator of one or more clients. Used to start, step and stop games and replays.
 class LadderCoordinator {
 public:
-	LadderCoordinator();
+	LadderCoordinator(const std::string& address);
     ~LadderCoordinator();
 
     // Initialization and setup.
